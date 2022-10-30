@@ -36,6 +36,10 @@ public class Main {
 
         System.out.println("Загальний показник атаки для обох династій = " + (TotalPowerMiny + TotalPowerLi));
 
+        int x = 10; // x 12 y 4 (10 + 4 + 12 - 11 + 4)
+        int y = 3;
+
+        System.out.println("result = " + (x++ + ++y + ++x - --x + y++));
 
 
 
