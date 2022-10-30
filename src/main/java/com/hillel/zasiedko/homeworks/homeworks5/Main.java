@@ -10,8 +10,8 @@ public class Main {
 
         System.out.println("Please enter your team name");
         Scanner scanner = new Scanner(System.in);
-        String gradis = scanner.nextLine();
-        System.out.println("Team 1 = " + gradis);
+        String dennvi = scanner.nextLine();
+        System.out.println("Team 1 = " + dennvi);
 
 
         System.out.println("Please, write your number of kills");
@@ -174,7 +174,7 @@ public class Main {
             System.out.println(" AVG1 <= AVG2 ");
         }
 
-        System.out.println(" Перемогла команда " + gradis + " набрала " + avg1 + " очків ");
+        System.out.println(" Перемогла команда " + dennvi + " набрала " + avg1 + " очків ");
     }
 }
 
