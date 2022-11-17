@@ -16,7 +16,7 @@ public class Main {
             lottery[i] = (int) (Math.random() * 10);
         }
         Arrays.sort(lottery);
-
+        System.out.println(Arrays.toString(lottery));
 
 
 
@@ -27,7 +27,7 @@ public class Main {
 
         }
         Arrays.sort(player);
-
+        System.out.println(Arrays.toString(player));
 
         for (int i = 0; i < lottery.length; i++) {
             if (lottery[i] == player[i]){
