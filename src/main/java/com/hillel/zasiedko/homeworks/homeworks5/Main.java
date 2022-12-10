@@ -6,175 +6,69 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        // Team1
-
-        System.out.println("Please enter your team name");
         Scanner scanner = new Scanner(System.in);
-        String dennvi = scanner.nextLine();
-        System.out.println("Team 1 = " + dennvi);
+        String team1Name;
+        String team2Name;
+        final int COUNT_PLAYERS = 5;
+        int[] team1 = new int[COUNT_PLAYERS];
+        int[] team2 = new int[COUNT_PLAYERS];
+        double sumFragsTeam1 = 0;
+        double sumFragsTeam2 = 0;
+        double avgFragsTeam1 = 0;
+        double avgFragsTeam2 = 0;
 
+        System.out.println("Enter team1 name: ");
+        team1Name = scanner.nextLine();
 
-        System.out.println("Please, write your number of kills");
-        Scanner scanner1 = new Scanner(System.in);
-        if (scanner.hasNextInt()) {
-            int kills1 = scanner.nextInt();
-            System.out.println(kills1);
-            System.out.println("shuhehu = " + kills1);
-            scanner.nextLine();
-        } else {
-            System.out.println("Wrong data! Restart application");
-            System.exit(0);
+        System.out.println("Enter team2 name: ");
+        team2Name = scanner.nextLine();
+
+        for (int i = 0; i < team1.length; i++) {
+            System.out.println("Please enter frags for player " + (i + 1) + " from team " + team1Name);
+            team1[i] = getFrags(scanner);
+            sumFragsTeam1 += team1[i];
         }
 
-        Scanner scanner2 = new Scanner(System.in);
-        if (scanner.hasNextInt()) {
-            int kills2 = scanner.nextInt();
-            System.out.println(kills2);
-            System.out.println("bk9 = " + kills2);
-            scanner.nextLine();
-        } else {
-            System.out.println("Wrong data! Restart application");
-            System.exit(0);
+        for (int i = 0; i < team2.length; i++) {
+            System.out.println("Please enter frags for player " + (i + 1) + " from team " + team2Name);
+            team2[i] = getFrags(scanner);
+            sumFragsTeam2 += team2[i];
         }
 
-        Scanner scanner3 = new Scanner(System.in);
-        if (scanner.hasNextInt()) {
-            int kills3 = scanner.nextInt();
-            System.out.println(kills3);
-            System.out.println("c4rlwow = " + kills3);
-            scanner.nextLine();
+        System.out.println("sum frags team " + team1Name + ": " + sumFragsTeam1);
+        System.out.println("sum frags team " + team2Name + ": " + sumFragsTeam2);
+
+        avgFragsTeam1 = sumFragsTeam1 / COUNT_PLAYERS;
+        avgFragsTeam2 = sumFragsTeam2 / COUNT_PLAYERS;
+
+        System.out.println("avg frags team " + team1Name + ": " + avgFragsTeam1);
+        System.out.println("avg frags team " + team2Name + ": " + avgFragsTeam2);
+
+        if (avgFragsTeam1 == avgFragsTeam2) {
+            System.out.println("Draw");
+        } else if (avgFragsTeam1 > avgFragsTeam2) {
+            System.out.println("Team " + team1Name + " won");
         } else {
-            System.out.println("Wrong data! Restart application");
-            System.exit(0);
+            System.out.println("Team " + team2Name + " won");
         }
 
-        Scanner scanner4 = new Scanner(System.in);
-        if (scanner.hasNextInt()) {
-            int kills4 = scanner.nextInt();
-            System.out.println(kills4);
-            System.out.println("colltheboy = " + kills4);
-            scanner.nextLine();
-        } else {
-            System.out.println("Wrong data! Restart application");
-            System.exit(0);
+        scanner.close();
+    }
+    static int getFrags(Scanner scanner) {
+        while (true) {
+            if (scanner.hasNextInt()) {
+                int temp = scanner.nextInt();
+                if (temp >= 0) {
+                    return temp;
+                } else {
+                    System.out.println("Please enter positive number");
+                }
+                scanner.nextLine();
+            } else {
+                System.out.println("Wrong data, try again");
+                scanner.nextLine();
+            }
         }
-
-        Scanner scanner5 = new Scanner(System.in);
-        if (scanner.hasNextInt()) {
-            int kills5 = scanner.nextInt();
-            System.out.println(kills5);
-            System.out.println("p1eckFinger = " + kills5);
-            scanner.nextLine();
-        } else {
-            System.out.println("Wrong data! Restart application");
-            System.exit(0);
-        }
-
-        int shuhehu = 29;
-        int bk9 = 27;
-        int c4rlwow = 18;
-        int colltheboy = 16;
-        int p1eckFinger = 10;
-
-        int numberOfPlayers1 = 5;
-
-        int teamKills1 = shuhehu + bk9 + c4rlwow + colltheboy + p1eckFinger;
-
-        int avg1 = teamKills1 / numberOfPlayers1;
-
-        System.out.println();
-
-        System.out.println(" Team Kills1 = " + teamKills1);
-        System.out.println(" Team AVG1 = " + avg1);
-
-        //Team 2
-
-        System.out.println("Please enter your team name");
-        Scanner scannerteam = new Scanner(System.in);
-        String pikantni = scanner.nextLine();
-        System.out.println("Team 2 = " + pikantni);
-
-
-        System.out.println("Please, write your number of kills");
-        Scanner scanner6 = new Scanner(System.in);
-        if (scanner.hasNextInt()) {
-            int kills6 = scanner.nextInt();
-            System.out.println(kills6);
-            System.out.println("callmedaddey = " + kills6);
-            scanner.nextLine();
-        } else {
-            System.out.println("Wrong data! Restart application");
-            System.exit(0);
-        }
-
-        Scanner scanner7 = new Scanner(System.in);
-        if (scanner.hasNextInt()) {
-            int kills7 = scanner.nextInt();
-            System.out.println(kills7);
-            System.out.println("glaadii = " + kills7);
-            scanner.nextLine();
-        } else {
-            System.out.println("Wrong data! Restart application");
-            System.exit(0);
-        }
-
-        Scanner scanner8 = new Scanner(System.in);
-        if (scanner.hasNextInt()) {
-            int kills8 = scanner.nextInt();
-            System.out.println(kills8);
-            System.out.println("koury = " + kills8);
-            scanner.nextLine();
-        } else {
-            System.out.println("Wrong data! Restart application");
-            System.exit(0);
-        }
-
-        Scanner scanner9 = new Scanner(System.in);
-        if (scanner.hasNextInt()) {
-            int kills9 = scanner.nextInt();
-            System.out.println(kills9);
-            System.out.println("abohadid = " + kills9);
-            scanner.nextLine();
-        } else {
-            System.out.println("Wrong data! Restart application");
-            System.exit(0);
-        }
-
-        Scanner scanner10 = new Scanner(System.in);
-        if (scanner.hasNextInt()) {
-            int kills10 = scanner.nextInt();
-            System.out.println(kills10);
-            System.out.println("hr_o = " + kills10);
-            scanner.nextLine();
-        } else {
-            System.out.println("Wrong data! Restart application");
-            System.exit(0);
-        }
-
-        int callmedaddey = 17;
-        int glaadii = 17;
-        int koury = 13;
-        int abohadid = 12;
-        int hr_o = 11;
-
-        int numberOfPlayers2 = 5;
-
-        int teamKills2 = callmedaddey + glaadii + koury + abohadid + hr_o;
-
-        int avg2 = teamKills2 / numberOfPlayers2;
-
-        System.out.println();
-
-        System.out.println(" Team Kills2 = " + teamKills2);
-        System.out.println(" Team AVG2 = " + avg2);
-
-        if (avg1 > avg2) {
-            System.out.println(" AVG1 > AVG2 ");
-        } else {
-            System.out.println(" AVG1 <= AVG2 ");
-        }
-
-        System.out.println(" Перемогла команда " + dennvi + " набрала " + avg1 + " очків ");
     }
 }
 
