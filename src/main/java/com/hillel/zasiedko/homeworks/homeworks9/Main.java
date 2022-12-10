@@ -7,48 +7,59 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int n, m;
+        Scanner scanner = new Scanner(System.in);
+        int n = getNumber(scanner);
+        int m = getNumber(scanner);
 
-        Scanner s = new Scanner(System.in);
+        int[][] array1 = new int[n][m];
+        int[][] array2 = new int[m][n];
 
-        System.out.println("Enter array rows: ");
-        int row = s.nextInt();
+        for (int i = 0; i < array1.length; i++) {
+            for (int j = 0; j < array1[i].length; j++) {
+                array1[i][j] = (int) (Math.random() * 101);
+            }
+        }
+        System.out.println("First array:");
+        printArray(array1);
 
-        System.out.println("Enter array columns: ");
-        int column = s.nextInt();
-
-        int array[][] = new int[row][column];
-
-        System.out.println("Enter matrix:");
-
-        for(n = 0; n < row; n++) {
-            for(m = 0; m < column; m++)
-            {
-                array[n][m] = s.nextInt();
-                System.out.print(" ");
+        for (int i = 0; i < array2.length; i++) {
+            for (int j = 0; j < array2[i].length; j++) {
+                array1[i][j] = array1[j][i];
             }
         }
 
-        System.out.println("Matrix before transposition ");
+        System.out.println("Second array:");
+        printArray(array2);
 
-        for(n = 0; n < row; n++) {
-            for(m = 0; m < column; m++)
-            {
-                System.out.print(array[n][m] + " ");
+        scanner.close();
+    }
+    static void printArray(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.println(array[i][j] + "\t");
             }
-            System.out.println(" ");
+            System.out.println();
         }
+    }
 
-        System.out.println("Matrix after transposition ");
-
-        for(n = 0; n < column; n++) {
-            for(m = 0; m < row; m++)
-            {
-                System.out.print(array[m][n] + " ");
+    static int getNumber(Scanner scanner) {
+        int temp = 0;
+        System.out.println("Please enter array length");
+        while (true){
+            if (scanner.hasNextInt()) {
+                temp = scanner.nextInt();
+                if (temp < 0){
+                    System.out.println("Please enter positive number");
+                }else {
+                    break;
+                }
+                scanner.nextLine();
+            }else {
+                System.out.println("Wrong data,try again");
+                scanner.nextLine();
             }
-            System.out.println(" ");
         }
-
+        return temp;
     }
 }
 
