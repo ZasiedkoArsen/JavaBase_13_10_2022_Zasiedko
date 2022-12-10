@@ -33,8 +33,8 @@ public class Main {
         System.out.println();
         System.out.println("Total age of players Team2 : " + sum1);
 
-        int averageAgeTeam1 = sum / 25;
-        int averageAgeTeam2 = sum1 / 25;
+        double averageAgeTeam1 = sum / 25;
+        double averageAgeTeam2 = sum1 / 25;
 
         System.out.println("Average Age Team1 : " + averageAgeTeam1);
         System.out.println("Average Age Team2 : " + averageAgeTeam2);
