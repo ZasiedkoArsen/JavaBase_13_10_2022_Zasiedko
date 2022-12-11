@@ -81,7 +81,7 @@ public class Profile {
         System.out.println( "Account info: " + "\n" + "Name : " + getName() + "\n" + "Last name : " + lastName + "\n" + "Age : " + getAge() + "\n"
                 + "Day : " + getDay() + "\n" + "Month : " + getMonth() + "\n" + "Year : " + getYear() + "\n" + "Email : "
                 + getEmail() + "\n" + "Phone number : " + getPhoneNumber() + "\n" +  "Weight : " + weight + "\n"
-                + "Pressure : " + pressure + "\n" + "Steps : " + steps);
+                + "Pressure : " + pressure + "\n" + "Steps : " + steps + "\n");
     }
 
 }

@@ -15,7 +15,10 @@ public class Main {
         char degree = '\u00BA';
         System.out.println("width = " + width + degree + "; longitude = " + longitude + degree);
 
-    }
 
+
+
+
+    }
 }
 
