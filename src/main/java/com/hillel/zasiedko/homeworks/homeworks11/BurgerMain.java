@@ -6,5 +6,7 @@ public class BurgerMain {
         Burger dietBurger = new Burger("bun","meat","cheese","greens");
         Burger richBurger = new Burger("bun","meat","cheese","greens","mayonnaise","porkMeat");
 
+
+
     }
 }
