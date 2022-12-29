@@ -44,7 +44,7 @@ public class Main {
 
     static int getNumber(Scanner scanner) {
         int temp = 0;
-        System.out.println("Please enter array length");
+        System.out.println("Please enter array length" + "");
         while (true){
             if (scanner.hasNextInt()) {
                 temp = scanner.nextInt();
