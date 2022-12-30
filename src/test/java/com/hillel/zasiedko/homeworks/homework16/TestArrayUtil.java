@@ -7,7 +7,7 @@ import static com.hillel.zasiedko.homeworks.homeworks16.ArrayUtil.getAverageOfAr
 import static com.hillel.zasiedko.homeworks.homeworks16.ArrayUtil.ArraySquare;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestArrayUti {
+public class TestArrayUtil {
     static int[] arrayTest;
 
     @BeforeAll
